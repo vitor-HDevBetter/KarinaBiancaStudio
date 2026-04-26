@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Gradiente rosa — espelha o logo original -->
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#F0A0BC"/>
+      <stop offset="100%" stop-color="#C8507A"/>
+    </linearGradient>
+    <linearGradient id="pinkGradText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#E07898"/>
+      <stop offset="100%" stop-color="#A83060"/>
+    </linearGradient>
+    <!-- Fundo suave -->
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="55%">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF0F4"/>
+    </radialGradient>
+    <!-- Blob decorativo -->
+    <radialGradient id="blobTR" cx="80%" cy="15%" r="40%">
+      <stop offset="0%" stop-color="#F9C5D5" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFF5F8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobBL" cx="15%" cy="85%" r="35%">
+      <stop offset="0%" stop-color="#F9C5D5" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFF5F8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="500" height="500" rx="28" fill="url(#bgGrad)"/>
+  <rect width="500" height="500" rx="28" fill="url(#blobTR)"/>
+  <rect width="500" height="500" rx="28" fill="url(#blobBL)"/>
+
+  <!-- Círculo outline decorativo -->
+  <circle cx="250" cy="210" r="155" fill="none" stroke="url(#pinkGrad)" stroke-width="1.5" opacity="0.65"/>
+
+  <!-- Brilho / sparkle (canto superior direito do círculo) -->
+  <g transform="translate(385,77)">
+    <path d="M0,-10 L2.5,-2.5 L10,0 L2.5,2.5 L0,10 L-2.5,2.5 L-10,0 L-2.5,-2.5 Z"
+          fill="url(#pinkGrad)" opacity="0.9"/>
+  </g>
+  <!-- pequeno brilho secundário -->
+  <g transform="translate(395,100)">
+    <path d="M0,-5 L1.2,-1.2 L5,0 L1.2,1.2 L0,5 L-1.2,1.2 L-5,0 L-1.2,-1.2 Z"
+          fill="#E07898" opacity="0.5"/>
+  </g>
+
+  <!-- ── Monograma KB em estilo caligráfico ── -->
+  <!-- Letra K -->
+  <text x="148" y="270"
+        font-family="'Cormorant Garamond', 'Times New Roman', serif"
+        font-size="180" font-weight="400" font-style="italic"
+        fill="url(#pinkGrad)" letter-spacing="-8"
+        opacity="0.95">K</text>
+
+  <!-- Letra B -->
+  <text x="228" y="270"
+        font-family="'Cormorant Garamond', 'Times New Roman', serif"
+        font-size="180" font-weight="600" font-style="italic"
+        fill="url(#pinkGrad)" letter-spacing="0"
+        opacity="0.95">B</text>
+
+  <!-- Swash / cauda ornamental abaixo do KB -->
+  <path d="M155,285 Q190,320 250,310 Q310,300 345,285"
+        fill="none" stroke="url(#pinkGrad)" stroke-width="1.8"
+        stroke-linecap="round" opacity="0.55"/>
+  <path d="M140,295 Q185,340 250,328 Q318,316 360,295"
+        fill="none" stroke="url(#pinkGrad)" stroke-width="1.2"
+        stroke-linecap="round" opacity="0.30"/>
+
+  <!-- ── KARINA BIANCA ── -->
+  <text x="250" y="360"
+        font-family="'Jost', 'Helvetica Neue', Arial, sans-serif"
+        font-size="32" font-weight="400" letter-spacing="10"
+        fill="url(#pinkGradText)" text-anchor="middle"
+        opacity="0.92">KARINA BIANCA</text>
+
+  <!-- Linhas laterais —  STUDIO  — -->
+  <line x1="72"  y1="381" x2="168" y2="381" stroke="url(#pinkGrad)" stroke-width="1" opacity="0.55"/>
+  <line x1="332" y1="381" x2="428" y2="381" stroke="url(#pinkGrad)" stroke-width="1" opacity="0.55"/>
+  <text x="250" y="386"
+        font-family="'Jost', 'Helvetica Neue', Arial, sans-serif"
+        font-size="16" font-weight="400" letter-spacing="8"
+        fill="url(#pinkGradText)" text-anchor="middle"
+        opacity="0.75">STUDIO</text>
+
+  <!-- ── Ícone mão + esmalte (estilo line art) ── -->
+  <g transform="translate(212, 400) scale(1.12)" opacity="0.70">
+    <!-- Esmalte (frasco) -->
+    <rect x="46" y="52" width="14" height="22" rx="3"
+          fill="none" stroke="url(#pinkGrad)" stroke-width="1.5"/>
+    <rect x="49" y="46" width="8"  height="8"  rx="2"
+          fill="none" stroke="url(#pinkGrad)" stroke-width="1.3"/>
+    <!-- Mão -->
+    <path d="M10,60 Q8,40 14,30 Q16,22 22,24 Q24,18 30,20 Q32,14 38,17 Q40,12 45,15 L46,52"
+          fill="none" stroke="url(#pinkGrad)" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Unhas (pontas dos dedos arredondadas) -->
+    <path d="M13,29 Q10,25 13,22 Q16,19 18,23"
+          fill="none" stroke="url(#pinkGrad)" stroke-width="1.3"
+          stroke-linecap="round"/>
+    <path d="M22,24 Q20,18 24,16 Q28,14 28,20"
+          fill="none" stroke="url(#pinkGrad)" stroke-width="1.3"
+          stroke-linecap="round"/>
+    <path d="M30,20 Q29,14 33,13 Q37,12 37,18"
+          fill="none" stroke="url(#pinkGrad)" stroke-width="1.3"
+          stroke-linecap="round"/>
+    <path d="M38,17 Q38,11 42,11 Q46,11 45,17"
+          fill="none" stroke="url(#pinkGrad)" stroke-width="1.3"
+          stroke-linecap="round"/>
+    <!-- Brilhinho na mão -->
+    <path d="M5,45 L7,43 L9,45 L7,47 Z"
+          fill="url(#pinkGrad)" opacity="0.6" transform="rotate(-15,7,45)"/>
+  </g>
+</svg>

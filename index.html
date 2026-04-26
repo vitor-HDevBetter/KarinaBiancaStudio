@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Karina Bianca Studio — Especialista em nail design, manicure, pedicure e alongamento de unhas. Excelência e sofisticação em cada detalhe." />
+  <meta name="keywords" content="manicure, pedicure, nail art, alongamento unhas, gel, acrílico, Karina Bianca, studio unhas" />
+  <meta name="author" content="Karina Bianca Studio" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Karina Bianca Studio | Nail Design & Beleza" />
+  <meta property="og:description" content="Especialista em nail design. Excelência e sofisticação em cada detalhe." />
+  <meta property="og:image"       content="logo.png" />
+
+  <title>Karina Bianca Studio | Nail Design & Beleza</title>
+
+  <!-- Favicon placeholder (substitua pelo seu ícone) -->
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       1. NAVBAR
+  ══════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="#home" class="navbar__logo" aria-label="Karina Bianca Studio — Início">
+        <img src="logo.svg" alt="Logo Karina Bianca Studio"
+             onerror="this.src='logo.png'; this.onerror=function(){this.style.display='none'; this.nextElementSibling.style.display='block'}" />
+        <span class="navbar__logo-text" style="display:none">Karina Bianca Studio</span>
+      </a>
+
+      <!-- Toggle Mobile -->
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Links -->
+      <ul class="navbar__links" id="navLinks" role="list">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato" class="btn-nav">Agendar Agora</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+       2. HERO
+  ══════════════════════════════════════════════ -->
+  <section class="hero" id="home" aria-label="Seção principal">
+    <div class="container hero__inner">
+
+      <!-- Conteúdo -->
+      <div class="hero__content">
+        <div class="hero__badge reveal">
+          <span>✦</span> Studio Premium de Nail Design
+        </div>
+
+        <h1 class="hero__title reveal reveal-delay-1">
+          Unhas que contam a sua
+          <em>história de beleza</em>
+        </h1>
+
+        <p class="hero__sub reveal reveal-delay-2">
+          Especialista em nail design com anos de experiência. Entrego um trabalho de excelência, com técnica refinada e atenção absoluta aos detalhes.
+        </p>
+
+        <div class="hero__actions reveal reveal-delay-3">
+          <a href="#contato" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            Agendar Horário
+          </a>
+          <a href="#servicos" class="btn-outline">Ver Serviços</a>
+        </div>
+
+        <div class="hero__stats reveal reveal-delay-4">
+          <div class="hero__stat-item">
+            <span class="hero__stat-num">+500</span>
+            <span class="hero__stat-label">Clientes Felizes</span>
+          </div>
+          <div class="hero__stat-item">
+            <span class="hero__stat-num">8+</span>
+            <span class="hero__stat-label">Anos de Experiência</span>
+          </div>
+          <div class="hero__stat-item">
+            <span class="hero__stat-num">100%</span>
+            <span class="hero__stat-label">Satisfação Garantida</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fotos duplas -->
+      <div class="hero__image-wrap reveal reveal-delay-2">
+        <div class="hero__duo">
+
+          <!-- Foto principal — foto real no studio -->
+          <div class="hero__duo-main">
+            <img
+              src="foto1.jpg"
+              alt="Karina Bianca no studio — Especialista em Nail Design"
+              class="hero__duo-img"
+              onerror="this.src='https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=520&h=640&q=85'; this.onerror=null"
+            />
+            <!-- Tag flutuante sobre foto principal -->
+            <div class="hero__duo-tag" aria-hidden="true">
+              <span class="hero__duo-tag-icon">✦</span>
+              <span>Nail Expert</span>
+            </div>
+          </div>
+
+          <!-- Foto secundária — versão artística -->
+          <div class="hero__duo-secondary">
+            <img
+              src="foto2.jpg"
+              alt="Karina Bianca — Arte digital exclusiva"
+              class="hero__duo-img"
+              onerror="this.src='https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=380&h=480&q=85'; this.onerror=null"
+            />
+          </div>
+
+          <!-- Badge flutuante -->
+          <div class="hero__float-badge" aria-hidden="true">
+            <div class="badge-icon">💅</div>
+            <div class="badge-text">
+              <strong>Karina Bianca</strong>
+              <span>Studio Premium</span>
+            </div>
+          </div>
+
+          <!-- Detalhe decorativo -->
+          <div class="hero__duo-ring" aria-hidden="true"></div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       3. SOCIAL PROOF — números rápidos
+  ══════════════════════════════════════════════ -->
+  <section class="proof" aria-label="Números do estúdio">
+    <div class="container proof__inner">
+
+      <div class="proof__item reveal">
+        <div class="proof__icon" aria-hidden="true">⭐</div>
+        <div class="proof__text">
+          <strong>4.9/5</strong>
+          <span>Avaliação Média</span>
+        </div>
+      </div>
+
+      <div class="proof__divider" aria-hidden="true"></div>
+
+      <div class="proof__item reveal reveal-delay-1">
+        <div class="proof__icon" aria-hidden="true">💖</div>
+        <div class="proof__text">
+          <strong>+500</strong>
+          <span>Clientes Satisfeitas</span>
+        </div>
+      </div>
+
+      <div class="proof__divider" aria-hidden="true"></div>
+
+      <div class="proof__item reveal reveal-delay-2">
+        <div class="proof__icon" aria-hidden="true">🏆</div>
+        <div class="proof__text">
+          <strong>8+ Anos</strong>
+          <span>de Experiência</span>
+        </div>
+      </div>
+
+      <div class="proof__divider" aria-hidden="true"></div>
+
+      <div class="proof__item reveal reveal-delay-3">
+        <div class="proof__icon" aria-hidden="true">✨</div>
+        <div class="proof__text">
+          <strong>Premium</strong>
+          <span>Produtos & Técnicas</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       4. SERVIÇOS
+  ══════════════════════════════════════════════ -->
+  <section class="services" id="servicos" aria-labelledby="services-title">
+    <div class="container">
+
+      <div class="services__header text-center reveal">
+        <span class="section-tag">O que oferecemos</span>
+        <h2 class="section-title" id="services-title">Serviços exclusivos<br>para você brilhar</h2>
+        <p class="section-sub">Técnicas modernas, produtos premium e um olhar artístico em cada trabalho.</p>
+      </div>
+
+      <div class="services__grid">
+
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">💅</div>
+          <h3 class="service-card__title">Manicure & Pedicure</h3>
+          <p class="service-card__desc">Tratamento completo das mãos e pés com esmaltação a escolha, cuticulas e hidratação profunda.</p>
+          <span class="service-card__price">A partir de R$ 60</span>
+        </article>
+
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-card__icon" aria-hidden="true">💎</div>
+          <h3 class="service-card__title">Unhas em Gel</h3>
+          <p class="service-card__desc">Alongamento e modelagem em gel com acabamento impecável, durabilidade superior e brilho intenso.</p>
+          <span class="service-card__price">A partir de R$ 120</span>
+        </article>
+
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-card__icon" aria-hidden="true">🌸</div>
+          <h3 class="service-card__title">Acrílico & Fibra</h3>
+          <p class="service-card__desc">Alongamento em acrílico ou fibra de vidro com resistência máxima e visual natural ou decorado.</p>
+          <span class="service-card__price">A partir de R$ 130</span>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">🎨</div>
+          <h3 class="service-card__title">Nail Art & Design</h3>
+          <p class="service-card__desc">Arte exclusiva criada à mão, desde designs minimalistas a composições elaboradas e personalizadas.</p>
+          <span class="service-card__price">A partir de R$ 20 por una</span>
+        </article>
+
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-card__icon" aria-hidden="true">🛁</div>
+          <h3 class="service-card__title">Spa dos Pés</h3>
+          <p class="service-card__desc">Experiência relaxante com esfoliação, banho de parafina, massagem e esmaltação completa.</p>
+          <span class="service-card__price">A partir de R$ 90</span>
+        </article>
+
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-card__icon" aria-hidden="true">📚</div>
+          <h3 class="service-card__title">Cursos Profissionalizantes</h3>
+          <p class="service-card__desc">Aprenda as técnicas profissionais com quem tem anos de experiência e método próprio de ensino.</p>
+          <span class="service-card__price">Consulte valores</span>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       5. SOBRE
+  ══════════════════════════════════════════════ -->
+  <section class="about" id="sobre" aria-labelledby="about-title">
+    <div class="container about__inner">
+
+      <!-- Imagem -->
+      <div class="about__image-wrap reveal">
+        <img
+          src="foto-karina.jpg"
+          alt="Karina Bianca — Especialista em Nail Design"
+          class="about__photo"
+          onerror="this.src='https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=80'; this.onerror=null"
+        />
+        <div class="about__badge-float" aria-hidden="true">
+          <strong>8+</strong>
+          <span>anos de<br>expertise</span>
+        </div>
+      </div>
+
+      <!-- Conteúdo -->
+      <div class="about__content reveal reveal-delay-2">
+        <span class="section-tag">Quem sou eu</span>
+        <h2 class="section-title" id="about-title">Karina Bianca —<br><em style="font-style:italic; color: var(--pink-500)">Paixão por beleza</em></h2>
+
+        <p class="about__text">
+          Sou especialista em nail design há mais de 8 anos, apaixonada por transformar unhas em verdadeiras obras de arte. Formada e certificada nas melhores técnicas do mercado, combinada com um olhar artístico refinado, cada trabalho é entregue com excelência e carinho.
+        </p>
+        <p class="about__text" style="margin-top: -0.75rem;">
+          No Karina Bianca Studio, você encontra um ambiente acolhedor, produtos de alta qualidade e um atendimento personalizado que cuida da sua saúde e beleza.
+        </p>
+
+        <div class="about__features">
+          <div class="about__feature">
+            <div class="about__feature-icon" aria-hidden="true">🎓</div>
+            <div class="about__feature-text">
+              <strong>Formação Especializada</strong>
+              <span>Cursos nacionais e internacionais em nail design e estética</span>
+            </div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon" aria-hidden="true">🌟</div>
+            <div class="about__feature-text">
+              <strong>Produtos Premium</strong>
+              <span>Trabalhamos com as melhores marcas do mercado, priorizando a saúde das suas unhas</span>
+            </div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon" aria-hidden="true">🤍</div>
+            <div class="about__feature-text">
+              <strong>Atendimento Personalizado</strong>
+              <span>Cada cliente recebe atenção exclusiva e um serviço sob medida</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contato" class="btn-primary">
+          Agendar meu horário
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       6. BENEFÍCIOS / DIFERENCIAIS
+  ══════════════════════════════════════════════ -->
+  <section class="benefits" id="diferenciais" aria-labelledby="benefits-title">
+    <div class="container">
+
+      <div class="benefits__header text-center reveal">
+        <span class="section-tag">Por que nos escolher</span>
+        <h2 class="section-title" id="benefits-title">Diferenciais que fazem<br>toda a diferença</h2>
+        <p class="section-sub">Comprometimento com a qualidade em cada etapa do seu atendimento.</p>
+      </div>
+
+      <div class="benefits__grid">
+
+        <div class="benefit-card reveal">
+          <span class="benefit-card__icon" aria-hidden="true">✦</span>
+          <h3 class="benefit-card__title">Técnica Premiada</h3>
+          <p class="benefit-card__text">Técnicas atualizadas e validadas pelos melhores profissionais do setor de nail design.</p>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-1">
+          <span class="benefit-card__icon" aria-hidden="true">🔬</span>
+          <h3 class="benefit-card__title">Biossegurança</h3>
+          <p class="benefit-card__text">Protocolos rigorosos de higiene e esterilização para a sua total segurança e tranquilidade.</p>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-2">
+          <span class="benefit-card__icon" aria-hidden="true">💝</span>
+          <h3 class="benefit-card__title">Exclusividade</h3>
+          <p class="benefit-card__text">Designs exclusivos e personalizados. Suas unhas serão únicas, criadas especialmente para você.</p>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-3">
+          <span class="benefit-card__icon" aria-hidden="true">⏰</span>
+          <h3 class="benefit-card__title">Pontualidade</h3>
+          <p class="benefit-card__text">Respeitamos seu tempo. Agendamento organizado para que você não espere além do necessário.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <span class="benefit-card__icon" aria-hidden="true">🌿</span>
+          <h3 class="benefit-card__title">Produtos Seguros</h3>
+          <p class="benefit-card__text">Marcas reconhecidas e aprovadas pela ANVISA. Cuidado com a saúde das suas unhas em primeiro lugar.</p>
+        </div>
+
+        <div class="benefit-card reveal reveal-delay-1">
+          <span class="benefit-card__icon" aria-hidden="true">🤝</span>
+          <h3 class="benefit-card__title">Pós-atendimento</h3>
+          <p class="benefit-card__text">Suporte e orientação após o serviço para manter a durabilidade e beleza das suas unhas.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       7. GALERIA — Carrossel de fotos
+  ══════════════════════════════════════════════ -->
+  <section class="gallery" id="galeria" aria-labelledby="gallery-title">
+    <div class="container">
+
+      <div class="gallery__header text-center reveal">
+        <span class="section-tag">Nosso trabalho</span>
+        <h2 class="section-title" id="gallery-title">Cada detalhe é uma<br><em style="font-style:italic;color:var(--pink-500)">obra de arte</em></h2>
+        <p class="section-sub">Confira alguns dos nossos trabalhos em manicure, pedicure e nail art.</p>
+      </div>
+
+      <!-- Carrossel de imagens -->
+      <div class="gallery-carousel reveal" role="region" aria-label="Galeria de trabalhos">
+
+        <div class="gallery-track" id="galleryTrack">
+
+          <!-- Foto 1 — Nail Art -->
+          <div class="gallery-slide">
+            <div class="gallery-card">
+              <img
+                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Nail art decorado — Karina Bianca Studio"
+                class="gallery-img"
+                loading="lazy"
+                onerror="handleGalleryError(this,'Nail Art')"
+              />
+              <div class="gallery-card__overlay">
+                <span class="gallery-card__label">Nail Art</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 2 — Gel -->
+          <div class="gallery-slide">
+            <div class="gallery-card">
+              <img
+                src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Unhas em gel — Karina Bianca Studio"
+                class="gallery-img"
+                loading="lazy"
+                onerror="handleGalleryError(this,'Unhas em Gel')"
+              />
+              <div class="gallery-card__overlay">
+                <span class="gallery-card__label">Unhas em Gel</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 3 — Manicure -->
+          <div class="gallery-slide">
+            <div class="gallery-card">
+              <img
+                src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Manicure — Karina Bianca Studio"
+                class="gallery-img"
+                loading="lazy"
+                onerror="handleGalleryError(this,'Manicure')"
+              />
+              <div class="gallery-card__overlay">
+                <span class="gallery-card__label">Manicure</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 4 — Pedicure / Spa -->
+          <div class="gallery-slide">
+            <div class="gallery-card">
+              <img
+                src="https://images.unsplash.com/photo-1582095133179-bfd08e2fb6b8?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Pedicure e spa dos pés — Karina Bianca Studio"
+                class="gallery-img"
+                loading="lazy"
+                onerror="handleGalleryError(this,'Pedicure')"
+              />
+              <div class="gallery-card__overlay">
+                <span class="gallery-card__label">Pedicure</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 5 — Esmaltes -->
+          <div class="gallery-slide">
+            <div class="gallery-card">
+              <img
+                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Esmaltes premium — Karina Bianca Studio"
+                class="gallery-img"
+                loading="lazy"
+                onerror="handleGalleryError(this,'Esmaltes')"
+              />
+              <div class="gallery-card__overlay">
+                <span class="gallery-card__label">Esmaltes Premium</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 6 — Acrílico -->
+          <div class="gallery-slide">
+            <div class="gallery-card">
+              <img
+                src="https://images.unsplash.com/photo-1604655898977-8e2b87d30abb?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Alongamento acrílico — Karina Bianca Studio"
+                class="gallery-img"
+                loading="lazy"
+                onerror="handleGalleryError(this,'Acrílico')"
+              />
+              <div class="gallery-card__overlay">
+                <span class="gallery-card__label">Acrílico &amp; Fibra</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 7 — Spa dos Pés -->
+          <div class="gallery-slide">
+            <div class="gallery-card">
+              <img
+                src="https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=600&h=700&q=80"
+                alt="Spa dos pés — Karina Bianca Studio"
+                class="gallery-img"
+                loading="lazy"
+                onerror="handleGalleryError(this,'Spa dos Pés')"
+              />
+              <div class="gallery-card__overlay">
+                <span class="gallery-card__label">Spa dos Pés</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 8 — French -->
+          <div class="gallery-slide">
+            <div class="gallery-card">
+              <img
+                src="https://images.unsplash.com/photo-1604655898977-8e2b87d30abb?auto=format&fit=crop&w=600&h=700&q=80&crop=entropy"
+                alt="French clássica — Karina Bianca Studio"
+                class="gallery-img"
+                loading="lazy"
+                onerror="handleGalleryError(this,'French Clássica')"
+              />
+              <div class="gallery-card__overlay">
+                <span class="gallery-card__label">French Clássica</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /gallery-track -->
+
+        <!-- Botões de controle -->
+        <button class="gallery-btn gallery-btn--prev" id="galleryPrev" aria-label="Foto anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <button class="gallery-btn gallery-btn--next" id="galleryNext" aria-label="Próxima foto">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+
+      </div><!-- /gallery-carousel -->
+
+      <!-- Indicadores dots -->
+      <div class="gallery-dots" id="galleryDots" role="tablist" aria-label="Navegar na galeria"></div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       8. DEPOIMENTOS
+  ══════════════════════════════════════════════ -->
+  <section class="testimonials" id="depoimentos" aria-labelledby="testimonials-title">
+    <div class="container">
+
+      <div class="testimonials__header text-center reveal">
+        <span class="section-tag">Depoimentos</span>
+        <h2 class="section-title" id="testimonials-title">O que dizem nossas<br>clientes</h2>
+        <p class="section-sub">Mais de 500 clientes satisfeitas. Veja o que elas falam sobre a experiência.</p>
+      </div>
+
+      <!-- Carrossel -->
+      <div class="carousel reveal" role="region" aria-label="Carrossel de depoimentos">
+        <div class="carousel__track" id="carouselTrack" aria-live="polite">
+
+          <!-- Depoimento 1 -->
+          <div class="testimonial-card" role="group" aria-label="Depoimento de Ana Paula">
+            <div class="testimonial-card__inner">
+              <div class="testimonial-card__quote" aria-hidden="true">"</div>
+              <p class="testimonial-card__text">
+                "A Karina é incrível! Minha manicure ficou perfeita, melhor que imaginei. O studio é lindo, limpo e o atendimento é excepcional. Já indiquei para todas as minhas amigas!"
+              </p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">AP</div>
+                <div>
+                  <div class="testimonial-card__name">Ana Paula Rodrigues</div>
+                  <div class="testimonial-card__role">Cliente há 2 anos</div>
+                  <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="testimonial-card" role="group" aria-label="Depoimento de Fernanda Lima">
+            <div class="testimonial-card__inner">
+              <div class="testimonial-card__quote" aria-hidden="true">"</div>
+              <p class="testimonial-card__text">
+                "Fiz alongamento em gel e ficou maravilhoso! Durou mais de 3 semanas impecável. A Karina tem um talento único e usa produtos de qualidade. Com certeza voltarei!"
+              </p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">FL</div>
+                <div>
+                  <div class="testimonial-card__name">Fernanda Lima</div>
+                  <div class="testimonial-card__role">Cliente há 1 ano</div>
+                  <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="testimonial-card" role="group" aria-label="Depoimento de Juliana Mendes">
+            <div class="testimonial-card__inner">
+              <div class="testimonial-card__quote" aria-hidden="true">"</div>
+              <p class="testimonial-card__text">
+                "O spa dos pés foi a melhor experiência que já tive! Me senti num salão de luxo. A Karina é extremamente cuidadosa e detalhista. Studio impecável de verdade!"
+              </p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">JM</div>
+                <div>
+                  <div class="testimonial-card__name">Juliana Mendes</div>
+                  <div class="testimonial-card__role">Nova cliente</div>
+                  <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 4 -->
+          <div class="testimonial-card" role="group" aria-label="Depoimento de Camila Torres">
+            <div class="testimonial-card__inner">
+              <div class="testimonial-card__quote" aria-hidden="true">"</div>
+              <p class="testimonial-card__text">
+                "Fiz o curso de nail art com a Karina e foi transformador! Metodologia clara, didática incrível. Hoje já atendo minhas próprias clientes. Muito obrigada!"
+              </p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">CT</div>
+                <div>
+                  <div class="testimonial-card__name">Camila Torres</div>
+                  <div class="testimonial-card__role">Aluna do curso</div>
+                  <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 5 -->
+          <div class="testimonial-card" role="group" aria-label="Depoimento de Patricia Souza">
+            <div class="testimonial-card__inner">
+              <div class="testimonial-card__quote" aria-hidden="true">"</div>
+              <p class="testimonial-card__text">
+                "Sempre saio do studio com um sorriso no rosto! As unhas ficam perfeitas, o ambiente é aconchegante e a Karina cuida de cada detalhe. Minha manicurista favorita!"
+              </p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">PS</div>
+                <div>
+                  <div class="testimonial-card__name">Patricia Souza</div>
+                  <div class="testimonial-card__role">Cliente há 3 anos</div>
+                  <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /carousel__track -->
+
+        <!-- Controles -->
+        <div class="carousel__controls">
+          <button class="carousel__btn" id="carouselPrev" aria-label="Depoimento anterior">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Navegar entre depoimentos"></div>
+          <button class="carousel__btn" id="carouselNext" aria-label="Próximo depoimento">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+
+      </div><!-- /carousel -->
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       8. CTA SECTION
+  ══════════════════════════════════════════════ -->
+  <section class="cta-section" aria-label="Chamada para ação">
+    <div class="container" style="position: relative; z-index: 1;">
+      <span class="cta-section__tag">✦ Transformação começa aqui ✦</span>
+      <h2 class="cta-section__title reveal">
+        Pronta para ter as unhas<br>dos seus sonhos?
+      </h2>
+      <p class="cta-section__sub reveal reveal-delay-1">
+        Agende agora mesmo e viva a experiência premium do Karina Bianca Studio. Vagas limitadas!
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="#contato" class="btn-white reveal reveal-delay-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Agendar Agora
+        </a>
+        <a href="https://wa.me/5500000000000?text=Olá%20Karina!%20Gostaria%20de%20agendar%20um%20horário."
+           target="_blank" rel="noopener noreferrer"
+           class="btn-white reveal reveal-delay-3"
+           style="background: transparent; border: 2px solid rgba(255,255,255,0.6); color: #fff;">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       9. CONTATO
+  ══════════════════════════════════════════════ -->
+  <section class="contact" id="contato" aria-labelledby="contact-title">
+    <div class="container contact__inner">
+
+      <!-- Informações -->
+      <div class="reveal">
+        <span class="section-tag">Entre em contato</span>
+        <h2 class="contact__info-title" id="contact-title">Agende seu horário<br>e se cuide!</h2>
+        <p class="contact__info-text">
+          Ficou com alguma dúvida ou quer saber mais sobre nossos serviços? Entre em contato — será um prazer atender você!
+        </p>
+
+        <div class="contact__details">
+          <div class="contact__detail">
+            <div class="contact__detail-icon" aria-hidden="true">📍</div>
+            <span>Rua da Beleza, 123 — Seu Bairro, Sua Cidade</span>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail-icon" aria-hidden="true">📱</div>
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer"
+               style="color: var(--pink-700); transition: color 0.2s;">(00) 00000-0000</a>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail-icon" aria-hidden="true">📧</div>
+            <a href="mailto:contato@karinabiancastudio.com.br"
+               style="color: var(--pink-700); transition: color 0.2s;">contato@karinabiancastudio.com.br</a>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail-icon" aria-hidden="true">🕐</div>
+            <span>Seg–Sex: 9h–19h &nbsp;|&nbsp; Sáb: 9h–14h</span>
+          </div>
+        </div>
+
+        <!-- Botão WhatsApp grande -->
+        <a href="https://wa.me/5500000000000?text=Olá%20Karina!%20Gostaria%20de%20agendar%20um%20horário."
+           target="_blank" rel="noopener noreferrer"
+           class="btn-primary" style="display: inline-flex; background: #25D366; box-shadow: 0 6px 20px rgba(37,211,102,0.35);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+
+      <!-- Formulário -->
+      <div class="reveal reveal-delay-2">
+        <form class="contact__form" id="contactForm" novalidate aria-label="Formulário de agendamento">
+          <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--pink-700); margin-bottom: 1.5rem; font-weight: 600;">
+            Solicitar Agendamento
+          </h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="nome">Nome *</label>
+              <input class="form-input" type="text" id="nome" name="nome"
+                     placeholder="Seu nome completo" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="telefone">WhatsApp *</label>
+              <input class="form-input" type="tel" id="telefone" name="telefone"
+                     placeholder="(00) 00000-0000" required autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">E-mail</label>
+            <input class="form-input" type="email" id="email" name="email"
+                   placeholder="seu@email.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="servico">Serviço desejado *</label>
+            <select class="form-select" id="servico" name="servico" required>
+              <option value="" disabled selected>Selecione um serviço...</option>
+              <option value="manicure">Manicure &amp; Pedicure</option>
+              <option value="gel">Unhas em Gel</option>
+              <option value="acrilico">Acrílico &amp; Fibra</option>
+              <option value="nail-art">Nail Art &amp; Design</option>
+              <option value="spa">Spa dos Pés</option>
+              <option value="curso">Curso Profissionalizante</option>
+              <option value="outro">Outro / Consulta</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="mensagem">Mensagem</label>
+            <textarea class="form-textarea" id="mensagem" name="mensagem"
+                      placeholder="Conte mais sobre o que você deseja, preferência de horário, etc."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            Enviar Solicitação
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       10. FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <!-- Marca -->
+        <div class="footer__brand">
+          <img src="logo.svg" alt="Karina Bianca Studio" class="footer__brand-logo"
+               onerror="this.src='logo.png'; this.onerror=function(){this.style.display='none'}" />
+          <p class="footer__brand-text">
+            Especialistas em nail design premium. Excelência, sofisticação e cuidado em cada detalhe para que você brilhe sempre.
+          </p>
+          <nav class="footer__social" aria-label="Redes sociais">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="footer__col-title">Serviços</h4>
+          <nav class="footer__links" aria-label="Links de serviços">
+            <a href="#servicos">Manicure &amp; Pedicure</a>
+            <a href="#servicos">Unhas em Gel</a>
+            <a href="#servicos">Acrílico &amp; Fibra</a>
+            <a href="#servicos">Nail Art</a>
+            <a href="#servicos">Spa dos Pés</a>
+            <a href="#servicos">Cursos</a>
+          </nav>
+        </div>
+
+        <!-- Contato rápido -->
+        <div>
+          <h4 class="footer__col-title">Contato</h4>
+          <nav class="footer__links" aria-label="Links de contato">
+            <a href="#sobre">Sobre a Karina</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#contato">Agendamento</a>
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="mailto:contato@karinabiancastudio.com.br">E-mail</a>
+          </nav>
+        </div>
+
+      </div><!-- /footer__inner -->
+
+      <!-- Bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; <span id="footerYear"></span> Karina Bianca Studio. Todos os direitos reservados.
+        </p>
+        <p class="footer__copy">
+          Feito com 💖 para beleza e excelência
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════
+       BOTÃO FLUTUANTE WHATSAPP
+  ══════════════════════════════════════════════ -->
+  <div class="whatsapp-float" aria-label="Contato via WhatsApp">
+    <div class="whatsapp-float__bubble" aria-hidden="true">Olá! Posso ajudar? 😊</div>
+    <a class="whatsapp-float__btn"
+       href="https://wa.me/5500000000000?text=Olá%20Karina!%20Gostaria%20de%20agendar%20um%20horário."
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Conversar no WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
