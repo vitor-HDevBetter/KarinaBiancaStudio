@@ -449,17 +449,83 @@ ul { list-style: none; }
   width: 62%;
   height: 86%;
   z-index: 2;
+  overflow: hidden;
 }
-.hero__duo-main .hero__duo-img {
-  width: 100%; height: 100%;
+.hero-home-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero-home-carousel__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero-home-carousel__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: top center;
   border-radius: 22px 22px 80px 22px;
   box-shadow: var(--shadow-lg);
-  transform: rotate(-2.5deg);
-  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  transform: rotate(-2.5deg) scale(1.02);
+  opacity: 0;
+  transition: opacity 0.55s ease, transform 0.55s ease;
 }
-.hero__duo-main:hover .hero__duo-img { transform: rotate(-1deg) scale(1.02); }
+.hero-home-carousel__image.active {
+  opacity: 1;
+  transform: rotate(-2.5deg) scale(1);
+}
+.hero__duo-main:hover .hero-home-carousel__image.active {
+  transform: rotate(-1deg) scale(1.02);
+}
+.hero-home-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--pink-600);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 6;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition), transform var(--transition);
+}
+.hero-home-carousel__btn:hover {
+  background: var(--white);
+  transform: translateY(-50%) scale(1.08);
+}
+.hero-home-carousel__btn--prev { left: 0.6rem; }
+.hero-home-carousel__btn--next { right: 0.6rem; }
+.hero-home-carousel__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.45rem;
+  z-index: 6;
+}
+.hero-home-carousel__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition);
+}
+.hero-home-carousel__dot.active {
+  background: var(--white);
+  transform: scale(1.18);
+}
 
 /* Tag "Nail Expert" sobre foto principal */
 .hero__duo-tag {
@@ -584,6 +650,18 @@ ul { list-style: none; }
   .hero__duo { height: clamp(260px, 82vw, 380px); }
   .hero__duo-main { width: 60%; height: 82%; }
   .hero__duo-secondary { width: 52%; height: 66%; }
+  .hero-home-carousel__btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+  .hero-home-carousel__btn--prev { left: 0.4rem; }
+  .hero-home-carousel__btn--next { right: 0.4rem; }
+  .hero-home-carousel__dots { bottom: 0.7rem; }
+  .hero__duo-tag {
+    right: -0.8rem;
+    font-size: 0.68rem;
+  }
 }
 
 /* ══════════════════════════════════════════════════════════

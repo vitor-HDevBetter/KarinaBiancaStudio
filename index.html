@@ -115,12 +115,32 @@
 
           <!-- Foto principal — foto real no studio -->
           <div class="hero__duo-main">
-            <img
-              src="foto1.jpg"
-              alt="Karina Bianca no studio — Especialista em Nail Design"
-              class="hero__duo-img"
-              onerror="this.src='https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=520&h=640&q=85'; this.onerror=null"
-            />
+            <div class="hero-home-carousel" id="heroHomeCarousel" aria-label="Carrossel de fotos de destaque">
+              <div class="hero-home-carousel__track" id="heroHomeCarouselTrack">
+                <img
+                  src="foto1.jpg"
+                  alt="Karina Bianca atendendo no studio"
+                  class="hero__duo-img hero-home-carousel__image active"
+                  onerror="this.src='https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=520&h=640&q=85'; this.onerror=null"
+                />
+                <img
+                  src="foto2.jpg"
+                  alt="Detalhes de nail art premium"
+                  class="hero__duo-img hero-home-carousel__image"
+                  onerror="this.src='https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=520&h=640&q=85'; this.onerror=null"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=520&h=640&q=85"
+                  alt="Unhas decoradas com acabamento sofisticado"
+                  class="hero__duo-img hero-home-carousel__image"
+                />
+              </div>
+
+              <button class="hero-home-carousel__btn hero-home-carousel__btn--prev" id="heroHomeCarouselPrev" aria-label="Foto anterior">‹</button>
+              <button class="hero-home-carousel__btn hero-home-carousel__btn--next" id="heroHomeCarouselNext" aria-label="Próxima foto">›</button>
+
+              <div class="hero-home-carousel__dots" id="heroHomeCarouselDots" aria-label="Navegação do carrossel"></div>
+            </div>
             <!-- Tag flutuante sobre foto principal -->
             <div class="hero__duo-tag" aria-hidden="true">
               <span class="hero__duo-tag-icon">✦</span>
