@@ -105,7 +105,91 @@
   initScrollReveal();
 
 
-  /* ── 4. CARROSSEL DE DEPOIMENTOS ───────────────────────── */
+  /* ── 4. CARROSSEL DE FOTOS (HERO) ──────────────────────── */
+  (function initHeroHomeCarousel() {
+    const carousel = document.getElementById('heroHomeCarousel');
+    const track = document.getElementById('heroHomeCarouselTrack');
+    const prevBtn = document.getElementById('heroHomeCarouselPrev');
+    const nextBtn = document.getElementById('heroHomeCarouselNext');
+    const dotsWrap = document.getElementById('heroHomeCarouselDots');
+
+    if (!carousel || !track || !prevBtn || !nextBtn || !dotsWrap) return;
+
+    const slides = track.querySelectorAll('.hero-home-carousel__image');
+    if (!slides.length) return;
+
+    let current = 0;
+    let timer = null;
+    let touchStartX = 0;
+
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      slides.forEach(function (_, index) {
+        const dot = document.createElement('button');
+        dot.className = 'hero-home-carousel__dot' + (index === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Ir para foto ' + (index + 1));
+        dot.addEventListener('click', function () {
+          goTo(index);
+          restartAuto();
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function render() {
+      slides.forEach(function (slide, index) {
+        slide.classList.toggle('active', index === current);
+      });
+      dotsWrap.querySelectorAll('.hero-home-carousel__dot').forEach(function (dot, index) {
+        dot.classList.toggle('active', index === current);
+      });
+    }
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      render();
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startAuto() {
+      stopAuto();
+      timer = setInterval(next, 4200);
+    }
+
+    function stopAuto() {
+      if (timer) clearInterval(timer);
+    }
+
+    function restartAuto() {
+      stopAuto();
+      startAuto();
+    }
+
+    prevBtn.addEventListener('click', function () { prev(); restartAuto(); });
+    nextBtn.addEventListener('click', function () { next(); restartAuto(); });
+
+    carousel.addEventListener('touchstart', function (e) {
+      touchStartX = e.changedTouches[0].clientX;
+      stopAuto();
+    }, { passive: true });
+    carousel.addEventListener('touchend', function (e) {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 36) diff > 0 ? next() : prev();
+      startAuto();
+    }, { passive: true });
+
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+
+    buildDots();
+    render();
+    startAuto();
+  })();
+
+
+  /* ── 5. CARROSSEL DE DEPOIMENTOS ───────────────────────── */
   (function initCarousel() {
     const track  = document.getElementById('carouselTrack');
     const prevBtn = document.getElementById('carouselPrev');
@@ -213,7 +297,7 @@
   })();
 
 
-  /* ── 5. FORMULÁRIO — envio via WhatsApp ────────────────── */
+  /* ── 6. FORMULÁRIO — envio via WhatsApp ────────────────── */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
